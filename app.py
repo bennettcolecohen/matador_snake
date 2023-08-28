@@ -26,7 +26,6 @@ topics_options = list(topics.index)
 # Type otions 
 type_options = [
     'Co-Op', 
-    'Web Property'
 ]
 
 def run_snake(topic: str, location: str, recipient_type: str): 
@@ -231,12 +230,11 @@ def check_location(location, target):
 st.title("Matador Snake")
 topic = st.selectbox("Topic", topics_options, 0)
 location = st.selectbox("Location", locations_options, 0)
-type = st.selectbox("Type", type_options, 0)
 
 
 
 # Create a button to run the function
 if st.button("Run Function"):
-    result = run_snake(topic, location, type)
+    result = run_snake(topic, location, 'Co-Op')
     st.write("The result is:")
     st.dataframe(result)
