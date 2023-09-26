@@ -75,7 +75,7 @@ def run_snake(url, state, topics):
 # Create UI elements for input
 st.title("Matador Snake")
 url = st.selectbox("URL", candidates_options, 0)
-topics = st.selectbox("Topic", topic_options, 0)
+topics = st.multiselect("Topic", topic_options)
 state = st.selectbox("Location", locations, 0)
 
 
